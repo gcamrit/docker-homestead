@@ -1,0 +1,60 @@
+version: '2'
+services:
+  nginx:
+    build:
+      context: ./.docker/nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    links:
+      - php-fpm
+    volumes_from:
+      - volumes_source
+    volumes:
+      - ./storage/logs/nginx/:/var/log/nginx
+      - ./config/sites/:/etc/nginx/sites-enabled/
+
+  php-fpm:
+    build:
+      context: ./.docker/php
+    expose:
+      - "9000"
+    volumes_from:
+      - volumes_source
+
+  mysql:
+    image: mysql:5.6
+    volumes_from:
+      - volumes_data
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: homestead
+      MYSQL_USER: homestead
+      MYSQL_PASSWORD: secret
+      MYSQL_ROOT_PASSWORD: root
+
+  redis:
+      build: ./.docker/redis
+      volumes_from:
+          - volumes_data
+      ports:
+          - "6379:6379"
+
+  playground:
+    build:
+      context: ./.docker/playground
+    volumes_from:
+      - volumes_source
+    tty: true
+
+  volumes_source:
+      image: tianon/true
+      volumes:
+          - ~/Projects:/var/www
+
+  volumes_data:
+    image: tianon/true
+    volumes:
+      - ./storage/data/mysql:/var/lib/mysql
+      - ./storage/data/redis:/data
