@@ -1,27 +1,16 @@
 version: '2'
 services:
-  nginx:
+  webserver:
     build:
-      context: ./.docker/nginx
+      context: ./.docker/nginx-php
     ports:
       - "80:80"
       - "443:443"
-    links:
-      - php-fpm
     volumes_from:
       - volumes_source
     volumes:
       - ./storage/logs/nginx/:/var/log/nginx
       - ./config/sites/:/etc/nginx/sites-enabled/
-
-  php-fpm:
-    build:
-      context: ./.docker/php
-    expose:
-      - "9000"
-    volumes_from:
-      - volumes_source
-
   mysql:
     image: mysql:5.6
     volumes_from:

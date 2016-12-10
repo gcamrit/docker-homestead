@@ -2,10 +2,9 @@ FROM ubuntu:16.04
 
 MAINTAINER MAINTAINER Amrit G.C. <music.demand01@gmail.com>
 
-RUN DEBIAN_FRONTEND=noninteractive
-
-RUN apt-get update && \
-  apt-get install -y \
+RUN \
+  apt-get update && \
+  apt-get install -y nginx \
   php7.0 \
   php7.0-fpm \
   php7.0-cli \
@@ -18,7 +17,8 @@ RUN apt-get update && \
   php7.0-curl \
   php7.0-zip \
   php7.0-xml \
-  php7.0-sqlite3
+  php7.0-sqlite3 && \
+  echo "\ndaemon off;" >> /etc/nginx/nginx.conf
 
 ARG INSTALL_XDEBUG=false
 RUN if [ ${INSTALL_XDEBUG} = true ]; then \
@@ -40,5 +40,5 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /var/www/
 
-EXPOSE 9000
-CMD service php7.0-fpm start && tail -f /var/log/php7.0-fpm.log
+EXPOSE 80
+CMD service php7.0-fpm start && nginx
