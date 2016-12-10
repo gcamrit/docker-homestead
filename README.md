@@ -35,8 +35,8 @@ MYSQL_USER: homestead
 MYSQL_PASSWORD: secret
 MYSQL_ROOT_PASSWORD: root
 ```
-3 - Run Containers: *(Make sure you are in the `docker-homestead` folder before running the `docker-compose` commands).*
+4 - Run Containers: *(Make sure you are in the `docker-homestead` folder before running the `docker-compose` commands).*
 ```bash
 docker-compose up -d
 ```
-
+5 - As this stack contains nginx all your project configuration file can be created in `config/sites` directory.
