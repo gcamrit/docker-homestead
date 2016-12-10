@@ -4,7 +4,7 @@ MAINTAINER MAINTAINER Amrit G.C. <music.demand01@gmail.com>
 
 ARG PUID=1000
 ARG PGID=1000
-ARG DOCKER_USER=amritgc
+ARG DOCKER_USER=homestead
 
 RUN groupadd -g $PGID $DOCKER_USER && useradd -u $PUID -g $DOCKER_USER -m $DOCKER_USER && adduser $DOCKER_USER sudo
 
