@@ -24,7 +24,7 @@ services:
       MYSQL_ROOT_PASSWORD: root
 
   redis:
-      build: ./.docker/redis
+      image: redis:3.0
       volumes_from:
           - volumes_data
       ports:
