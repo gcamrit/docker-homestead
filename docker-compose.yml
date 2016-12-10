@@ -40,7 +40,7 @@ services:
   volumes_source:
       image: tianon/true
       volumes:
-          - ~/Projects:/var/www
+          - $PROJECT_ROOT:/var/www
 
   volumes_data:
     image: tianon/true
