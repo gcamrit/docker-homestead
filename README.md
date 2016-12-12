@@ -30,10 +30,10 @@ INSTALL_COMPOSER=true
 INSTALL_LARAVEL_INSTALLER=true
 INSTALL_SYMFONY_INSTALLER=true
 
-MYSQL_DATABASE: homestead
-MYSQL_USER: homestead
-MYSQL_PASSWORD: secret
-MYSQL_ROOT_PASSWORD: root
+MYSQL_DATABASE=homestead
+MYSQL_USER=homestead
+MYSQL_PASSWORD=secret
+MYSQL_ROOT_PASSWORD=root
 ```
 4 - Run Containers: *(Make sure you are in the `docker-homestead` folder before running the `docker-compose` commands).*
 ```bash
