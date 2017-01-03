@@ -3,9 +3,10 @@ services:
   webserver:
     build:
       context: ./.docker/nginx-php
+      args:
+        - INSTALL_XDEBUG
     ports:
       - "80:80"
-      - "443:443"
     volumes_from:
       - volumes_source
     volumes:
@@ -33,6 +34,12 @@ services:
   playground:
     build:
       context: ./.docker/playground
+      args:
+        - INSTALL_XDEBUG
+        - DOCKER_USER
+        - INSTALL_COMPOSER
+        - INSTALL_LARAVEL_INSTALLER
+        - INSTALL_SYMFONY_INSTALLER
     volumes_from:
       - volumes_source
     tty: true
