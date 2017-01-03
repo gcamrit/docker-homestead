@@ -65,6 +65,7 @@ RUN if [ ${INSTALL_SYMFONY_INSTALLER} = true ]; then \
   chmod a+x ~/.composer/vendor/bin/symfony \
 ;fi
 
+RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 WORKDIR /var/www/
 
 RUN . ~/.bashrc
