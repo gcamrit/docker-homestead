@@ -1,4 +1,5 @@
-# docker-homestead
+# Containerized PHP Application
+
 Docker Homestead is PHP development environment, and It contains pre-packaged Docker Images that provides you a wonderful *development* environment without requiring you to install PHP, NGINX, Composer, Nodejs, MySQL, REDIS, and any other software on your machines.
 
 ## Requirements
