@@ -42,6 +42,7 @@ MYSQL_ROOT_PASSWORD=root
 docker-compose up -d
 ```
 5 - As this stack contains nginx all your project configuration file can be created in `config/sites` directory.
+
 6 - You must add the "domains" for your Nginx sites to the hosts file on your machine.On Mac and Linux, this file is located at `/etc/hosts`. On Windows, it is located at  `C:\Windows\System32\drivers\etc\hosts.` The lines you add to this file will look like the following:
 ```bash
 127.0.0.1  homestead.app
