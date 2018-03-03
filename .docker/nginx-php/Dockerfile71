@@ -1,8 +1,8 @@
-FROM amritgc/nginx-php
+FROM amritgc/nginx-php:php71
 
 LABEL MAINTAINER="Amrit G.C. <music.demand01@gmail.com>"
 
 WORKDIR /var/www/
 
 EXPOSE 80
-CMD service php7.2-fpm start && nginx
+CMD service php7.1-fpm start && nginx

@@ -1,56 +1,55 @@
-version: '2'
+version: '3.3'
 services:
   webserver:
     build:
       context: ./.docker/nginx-php
-      args:
-        - INSTALL_XDEBUG
+    container_name: webserver
     ports:
       - "80:80"
-    volumes_from:
-      - volumes_source
     volumes:
       - ./storage/logs/nginx/:/var/log/nginx
       - ./config/sites/:/etc/nginx/sites-enabled/
+      - $PROJECT_ROOT:/var/www
+
+  webserver71:
+    build:
+      context: ./.docker/nginx-php
+      dockerfile: Dockerfile71
+    container_name: webserver71  
+    ports:
+      - "81:80"
+    volumes:
+      - ./storage/logs/nginx/:/var/log/nginx
+      - ./config/sites/:/etc/nginx/sites-enabled/
+      - $PROJECT_ROOT:/var/www
+
   mysql:
     image: mysql:$MYSQL_VERSION
-    volumes_from:
-      - volumes_data
+    container_name: mysql    
     ports:
       - "3306:3306"
+    restart: always
     environment:
       MYSQL_DATABASE: $MYSQL_DATABASE
       MYSQL_USER: $MYSQL_USER
       MYSQL_PASSWORD: $MYSQL_PASSWORD
       MYSQL_ROOT_PASSWORD: $MYSQL_ROOT_PASSWORD
+    volumes:
+      - ./storage/data/mysql:/var/lib/mysql
 
   redis:
-      image: redis:3.0
-      volumes_from:
-          - volumes_data
-      ports:
-          - "6379:6379"
+    image: redis:3.0
+    container_name: redis
+    ports:
+        - "6379:6379"
+    volumes:
+      - ./storage/data/redis:/data
 
   playground:
     build:
       context: ./.docker/playground
-      args:
-        - INSTALL_XDEBUG
-        - DOCKER_USER
-        - INSTALL_COMPOSER
-        - INSTALL_LARAVEL_INSTALLER
-        - INSTALL_SYMFONY_INSTALLER
-    volumes_from:
-      - volumes_source
-    tty: true
-
-  volumes_source:
-      image: tianon/true
-      volumes:
-          - $PROJECT_ROOT:/var/www
-
-  volumes_data:
-    image: tianon/true
+    container_name: playground
     volumes:
-      - ./storage/data/mysql:/var/lib/mysql
-      - ./storage/data/redis:/data
+      - $PROJECT_ROOT:/var/www
+      - ./storage/composer:/home/homestead/.composer/cache
+    tty: true

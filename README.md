@@ -25,13 +25,7 @@ cd docker-homestead && cp .env.example .env
 DOCKER_USER=homestead   # you username of your local machine
 PROJECT_ROOT=~/Projects # where you put all you project on your machine
 
-INSTALL_XDEBUG=false
-INSTALL_OPCACHE=true
-INSTALL_COMPOSER=true
-INSTALL_LARAVEL_INSTALLER=true
-INSTALL_SYMFONY_INSTALLER=true
-
-MYSQL_VERSION=5.6 # available mysql version are 5.5, 5.6, 5.7
+MYSQL_VERSION=5.7 # available mysql version are 5.5, 5.6, 5.7
 MYSQL_DATABASE=homestead
 MYSQL_USER=homestead
 MYSQL_PASSWORD=secret
