@@ -1,5 +1,4 @@
 # Created by .ignore support plugin (hsz.mobi)
 .env
-storage/data
-storage/logs
-storage/composer
+storage
+_docpress

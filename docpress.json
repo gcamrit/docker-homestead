@@ -1,0 +1,7 @@
+{
+    "docs": "docs",
+    "github": "gcamrit/docker-homestead",
+    "markdown": {
+       "typographer": true
+    }
+}
