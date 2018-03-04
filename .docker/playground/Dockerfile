@@ -41,5 +41,6 @@ USER $DOCKER_USER
 
 WORKDIR /var/www/
 
+EXPOSE 8080
 RUN . ~/.bashrc
 CMD [ "bash" ]
