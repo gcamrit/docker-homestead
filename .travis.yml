@@ -12,7 +12,6 @@ env:
     - GIT_EMAIL: nobody@nobody.org
     - GITHUB_REPO: gcamrit/docker-homestead
     - GIT_SOURCE: _docpress
-    - GIT_BRANCH: documentation
 
 script:
 - npm install docpress && ./node_modules/.bin/docpress build
