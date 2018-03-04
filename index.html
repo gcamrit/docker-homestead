@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/style.css?t=615badd5">
+    <script src="assets/script.js?t=42463e55"></script>
+    <title>Docker Homestead</title>
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body class="-menu-visible">
+    <div class="doc-layout">
+      <div class="toggle menu-toggle js-menu-toggle"></div>
+      <div class="menu toc-menu">
+        <li class="menu-item -level-0 -parent">
+          <ul class="submenu">
+            <li class="menu-item -level-1"><a class="link title -active link-index" href="index.html">Docker Homestead</a>
+              <ul class="headings heading-list">
+                <li class="heading-item -depth-2"><a class="hlink link-requirements" href="#requirements">Requirements</a>
+                </li>
+                <li class="heading-item -depth-2"><a class="hlink link-installation" href="#installation">Installation</a>
+                  <ul class="heading-list -depth-2">
+                    <li class="heading-item -depth-3"><a class="hlink link-i-want-to-run-some-commands-what-now" href="#i-want-to-run-some-commands-what-now">I want to run some commands, What now ?</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1"><a class="link title  link-quick-start" href="quick-start.html">Getting started</a>
+            </li>
+          </ul>
+        </li>
+      </div>
+      <div class="body page-index">
+        <div class="header-nav">
+          <div class="right"><a class="iconlink" href="https://github.com/gcamrit/docker-homestead" data-title="gcamrit/docker-homestead">
+              <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
+          </div>
+        </div>
+        <div class="markdown-body"><h1 id="containerized-php-application">Containerized PHP Application</h1>
+<p>Docker Homestead is PHP development environment, and It contains pre-packaged Docker Images that provides you a wonderful <em>development</em> environment without requiring you to install PHP, NGINX, Composer, Nodejs, MySQL, REDIS, and any other software on your machines.</p>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li><a href="https://git-scm.com/downloads">Git</a></li>
+<li><a href="https://www.docker.com/products/docker/">Docker</a></li>
+<li><a href="https://www.docker.com/products/docker-compose">Docker Compose</a></li>
+</ul>
+<h2 id="installation">Installation</h2>
+<p>1 - Clone this repository anywhere on your machine:</p>
+<pre><code class="lang-bash">git <span class="pl-c1">clone</span> https://github.com/gcamrit/docker-homestead.git
+</code></pre>
+<p>2 - Now you have to configure you development environment</p>
+<pre><code class="lang-bash"><span class="pl-c1">cd</span> docker-homestead &amp;&amp; cp .env.example .env
+</code></pre>
+<p>3 - <code>.env</code> contains some configuration you might want to adjust as your need.</p>
+<pre><code class="lang-bash"><span class="pl-c"># this is what it contains by default feel free to change as you need</span>
+
+DOCKER_USER=homestead   <span class="pl-c"># you username of your local machine</span>
+PROJECT_ROOT=~/Projects <span class="pl-c"># where you put all you project on your machine</span>
+
+MYSQL_VERSION=5.7 <span class="pl-c"># available mysql version are 5.5, 5.6, 5.7</span>
+MYSQL_DATABASE=homestead
+MYSQL_USER=homestead
+MYSQL_PASSWORD=secret
+MYSQL_ROOT_PASSWORD=root
+</code></pre>
+<p>4 - Run Containers: <em>(Make sure you are in the <code>docker-homestead</code> folder before running the <code>docker-compose</code> commands).</em></p>
+<pre><code class="lang-bash">docker-compose up <span class="hljs-_">-d</span>
+</code></pre>
+<p>5 - As this stack contains nginx all your project configuration file can be created in <code>config/sites</code> directory.</p>
+<p>6 - You must add the &#x201C;domains&#x201D; for your Nginx sites to the hosts file on your machine.On Mac and Linux, this file is located at <code>/etc/hosts</code>. On Windows, it is located at  <code>C:\Windows\System32\drivers\etc\hosts.</code> The lines you add to this file will look like the following:</p>
+<pre><code class="lang-bash">127.0.0.1  homestead.app
+</code></pre>
+<h3 id="i-want-to-run-some-commands-what-now">I want to run some commands, What now ?</h3>
+<p>You can run commands from the Playground container.</p>
+<p>1 - Enter the <em>playground</em> container:</p>
+<pre><code class="lang-bash">docker-compose <span class="pl-c1">exec</span> playground bash
+</code></pre>
+<p>4 - Run anything you want :)</p>
+<pre><code class="lang-bash">php -v
+</code></pre>
+<pre><code class="lang-bash">composer
+</code></pre>
+<pre><code class="lang-bash">laravel
+</code></pre>
+
+        </div>
+        <div class="footer-nav">
+          <div class="right"><a href="quick-start.html"><span class="label">Next: </span><span class="title">Getting started</span></a></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

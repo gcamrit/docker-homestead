@@ -1,0 +1,98 @@
+{
+  "toc": {
+    "sections": [
+      {
+        "title": "Docker Homestead",
+        "source": "README.md",
+        "url": "index.html",
+        "slug": "index",
+        "headings": [
+          {
+            "title": "Requirements",
+            "depth": 2,
+            "id": "requirements"
+          },
+          {
+            "title": "Installation",
+            "depth": 2,
+            "id": "installation",
+            "headings": [
+              {
+                "title": "I want to run some commands, What now ?",
+                "depth": 3,
+                "id": "i-want-to-run-some-commands-what-now"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Getting started",
+        "source": "docs/quick-start.md",
+        "url": "quick-start.html",
+        "slug": "quick-start",
+        "headings": [
+          {
+            "title": "Requirements",
+            "depth": 2,
+            "id": "requirements"
+          },
+          {
+            "title": "Installation",
+            "depth": 2,
+            "id": "installation"
+          }
+        ]
+      }
+    ]
+  },
+  "index": {
+    "index.html": {
+      "source": "README.md",
+      "title": "Docker Homestead",
+      "pageTitle": "Docker Homestead",
+      "slug": "index",
+      "headings": [
+        {
+          "title": "Requirements",
+          "depth": 2,
+          "id": "requirements"
+        },
+        {
+          "title": "Installation",
+          "depth": 2,
+          "id": "installation",
+          "headings": [
+            {
+              "title": "I want to run some commands, What now ?",
+              "depth": 3,
+              "id": "i-want-to-run-some-commands-what-now"
+            }
+          ]
+        }
+      ]
+    },
+    "quick-start.html": {
+      "source": "docs/quick-start.md",
+      "title": "Getting started - Docker Homestead",
+      "pageTitle": "Getting started",
+      "slug": "quick-start",
+      "headings": [
+        {
+          "title": "Requirements",
+          "depth": 2,
+          "id": "requirements"
+        },
+        {
+          "title": "Installation",
+          "depth": 2,
+          "id": "installation"
+        }
+      ]
+    }
+  },
+  "sources": {
+    "README.md": "index.html",
+    "docs/quick-start.md": "quick-start.html"
+  }
+}
