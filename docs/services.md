@@ -6,7 +6,7 @@ $ docker-compose exec webserver bash
 ```
 - Now run ```$ ls``` command, all the respositories which are inside Projects can be seen 
 - Go to your project in which you want to play by ```$ cd project-repo``` 
-- php and composer related commands can be accomplish from here
+- php_cli related commands can be accomplish from here
 - Have Fun !
 
 ### Play with playground
@@ -17,7 +17,7 @@ $ docker-compose exec playground bash
 ```
 - Now run ```$ ls``` command, all the respositories which are inside Projects can be seen 
 - Go to your project in which you want to play by ```$ cd project-repo``` 
-- php related commands can be accomplish from here
+- php_cli, composer, npm etc related commands can be accomplish from here
 - Have Fun !
  
 ### How to work on mysql database ?
@@ -26,4 +26,9 @@ $ docker-compose exec playground bash
 ```bash
 $ docker-compose exec mysql bash
 ```
-- You will be able to do any database operation from command line.
+- Run the following command, and login to mysql
+```bash
+$ mysql -u homestead -p
+```
+
+- Then You will be able to do any database operation from command line.
