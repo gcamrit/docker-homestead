@@ -81,9 +81,9 @@
   $ laravel new blog
   ```  
   
-  Here blog is the name of laravel project
+  Here blog is the name of symfony project
 
-- Example config file for laravel application
+- Example config file for symfony application
   Inside the config/sites directory just create blog.conf and configuration be something like this
   
   ```bash
@@ -92,7 +92,7 @@
     listen [::]:80;
   
     server_name blog.local;
-    root /var/www/laravel/public;
+    root /var/www/blog/public;
   
     index index.php index.html index.htm index.nginx-debian.html;
   
@@ -122,10 +122,12 @@
   ```bash
   127.0.0.1  blog.local
   ```
- - In your laravel project .env file set following 
-   ```
-   DB_HOST=mysql
-   DB_USERNAME=homestead
-   DB_PASSWORD=secret
-   REDIS_HOST=redis
+ - In your symfony project .env file set following 
+   ```bash
+   DATABASE_URL=mysql://db_user:db_password@127.0.0.1:3306/db_name
    ```   
+   For e.g.
+
+   ```bash
+   DATABASE_URL=mysql://homestead:secret@127.0.0.1:3306/db_name
+   ```
