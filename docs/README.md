@@ -1,7 +1,8 @@
 Documentation
 =============
 
-* [Docker Homestead](../README.md)
 * [Getting started](quick-start.md)
 * [Services](services.md)
-* [Examples](examples.md)
+* Examples
+  * [Laravel Application](examples/laravel.md)
+  * [Symfony Application](examples/symfony.md)
