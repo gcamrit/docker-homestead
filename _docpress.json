@@ -2,28 +2,10 @@
   "toc": {
     "sections": [
       {
-        "title": "Docker Homestead",
-        "source": "README.md",
-        "url": "index.html",
-        "slug": "index",
-        "headings": [
-          {
-            "title": "Requirements",
-            "depth": 2,
-            "id": "requirements"
-          },
-          {
-            "title": "Documentation",
-            "depth": 2,
-            "id": "documentation"
-          }
-        ]
-      },
-      {
         "title": "Getting started",
         "source": "docs/quick-start.md",
-        "url": "quick-start.html",
-        "slug": "quick-start",
+        "url": "index.html",
+        "slug": "index",
         "headings": [
           {
             "title": "Requirements",
@@ -62,14 +44,12 @@
       },
       {
         "title": "Examples",
-        "source": "docs/examples.md",
-        "url": "examples.html",
-        "slug": "examples",
-        "headings": [
+        "sections": [
           {
-            "title": "Set up Laravel Project",
-            "depth": 2,
-            "id": "set-up-laravel-project",
+            "title": "Laravel Application",
+            "source": "docs/examples/laravel.md",
+            "url": "examples/laravel.html",
+            "slug": "exampleslaravel",
             "headings": [
               {
                 "title": "Installation",
@@ -79,9 +59,10 @@
             ]
           },
           {
-            "title": "Set up Symfony Project",
-            "depth": 2,
-            "id": "set-up-symfony-project",
+            "title": "Symfony Application",
+            "source": "docs/examples/symfony.md",
+            "url": "examples/symfony.html",
+            "slug": "examplessymfony",
             "headings": [
               {
                 "title": "Installation",
@@ -96,28 +77,10 @@
   },
   "index": {
     "index.html": {
-      "source": "README.md",
-      "title": "Docker Homestead",
-      "pageTitle": "Docker Homestead",
-      "slug": "index",
-      "headings": [
-        {
-          "title": "Requirements",
-          "depth": 2,
-          "id": "requirements"
-        },
-        {
-          "title": "Documentation",
-          "depth": 2,
-          "id": "documentation"
-        }
-      ]
-    },
-    "quick-start.html": {
       "source": "docs/quick-start.md",
-      "title": "Getting started - Docker Homestead",
+      "title": "Getting started",
       "pageTitle": "Getting started",
-      "slug": "quick-start",
+      "slug": "index",
       "headings": [
         {
           "title": "Requirements",
@@ -133,7 +96,7 @@
     },
     "services.html": {
       "source": "docs/services.md",
-      "title": "Services - Docker Homestead",
+      "title": "Services - Getting started",
       "pageTitle": "Services",
       "slug": "services",
       "headings": [
@@ -154,43 +117,37 @@
         }
       ]
     },
-    "examples.html": {
-      "source": "docs/examples.md",
-      "title": "Examples - Docker Homestead",
-      "pageTitle": "Examples",
-      "slug": "examples",
+    "examples/laravel.html": {
+      "source": "docs/examples/laravel.md",
+      "title": "Laravel Application - Getting started",
+      "pageTitle": "Laravel Application",
+      "slug": "exampleslaravel",
       "headings": [
         {
-          "title": "Set up Laravel Project",
-          "depth": 2,
-          "id": "set-up-laravel-project",
-          "headings": [
-            {
-              "title": "Installation",
-              "depth": 3,
-              "id": "installation"
-            }
-          ]
-        },
+          "title": "Installation",
+          "depth": 3,
+          "id": "installation"
+        }
+      ]
+    },
+    "examples/symfony.html": {
+      "source": "docs/examples/symfony.md",
+      "title": "Symfony Application - Getting started",
+      "pageTitle": "Symfony Application",
+      "slug": "examplessymfony",
+      "headings": [
         {
-          "title": "Set up Symfony Project",
-          "depth": 2,
-          "id": "set-up-symfony-project",
-          "headings": [
-            {
-              "title": "Installation",
-              "depth": 3,
-              "id": "installation"
-            }
-          ]
+          "title": "Installation",
+          "depth": 3,
+          "id": "installation"
         }
       ]
     }
   },
   "sources": {
-    "README.md": "index.html",
-    "docs/quick-start.md": "quick-start.html",
+    "docs/quick-start.md": "index.html",
     "docs/services.md": "services.html",
-    "docs/examples.md": "examples.html"
+    "docs/examples/laravel.md": "examples/laravel.html",
+    "docs/examples/symfony.md": "examples/symfony.html"
   }
 }
