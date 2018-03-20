@@ -13,16 +13,9 @@
             "id": "requirements"
           },
           {
-            "title": "Installation",
+            "title": "Documentation",
             "depth": 2,
-            "id": "installation",
-            "headings": [
-              {
-                "title": "I want to run some commands, What now ?",
-                "depth": 3,
-                "id": "i-want-to-run-some-commands-what-now"
-              }
-            ]
+            "id": "documentation"
           }
         ]
       },
@@ -43,6 +36,61 @@
             "id": "installation"
           }
         ]
+      },
+      {
+        "title": "Services",
+        "source": "docs/services.md",
+        "url": "services.html",
+        "slug": "services",
+        "headings": [
+          {
+            "title": "Play with webserver",
+            "depth": 3,
+            "id": "play-with-webserver"
+          },
+          {
+            "title": "Play with playground",
+            "depth": 3,
+            "id": "play-with-playground"
+          },
+          {
+            "title": "How to work on mysql database ?",
+            "depth": 3,
+            "id": "how-to-work-on-mysql-database"
+          }
+        ]
+      },
+      {
+        "title": "Examples",
+        "source": "docs/examples.md",
+        "url": "examples.html",
+        "slug": "examples",
+        "headings": [
+          {
+            "title": "Set up Laravel Project",
+            "depth": 2,
+            "id": "set-up-laravel-project",
+            "headings": [
+              {
+                "title": "Installation",
+                "depth": 3,
+                "id": "installation"
+              }
+            ]
+          },
+          {
+            "title": "Set up Symfony Project",
+            "depth": 2,
+            "id": "set-up-symfony-project",
+            "headings": [
+              {
+                "title": "Installation",
+                "depth": 3,
+                "id": "installation"
+              }
+            ]
+          }
+        ]
       }
     ]
   },
@@ -59,16 +107,9 @@
           "id": "requirements"
         },
         {
-          "title": "Installation",
+          "title": "Documentation",
           "depth": 2,
-          "id": "installation",
-          "headings": [
-            {
-              "title": "I want to run some commands, What now ?",
-              "depth": 3,
-              "id": "i-want-to-run-some-commands-what-now"
-            }
-          ]
+          "id": "documentation"
         }
       ]
     },
@@ -89,10 +130,67 @@
           "id": "installation"
         }
       ]
+    },
+    "services.html": {
+      "source": "docs/services.md",
+      "title": "Services - Docker Homestead",
+      "pageTitle": "Services",
+      "slug": "services",
+      "headings": [
+        {
+          "title": "Play with webserver",
+          "depth": 3,
+          "id": "play-with-webserver"
+        },
+        {
+          "title": "Play with playground",
+          "depth": 3,
+          "id": "play-with-playground"
+        },
+        {
+          "title": "How to work on mysql database ?",
+          "depth": 3,
+          "id": "how-to-work-on-mysql-database"
+        }
+      ]
+    },
+    "examples.html": {
+      "source": "docs/examples.md",
+      "title": "Examples - Docker Homestead",
+      "pageTitle": "Examples",
+      "slug": "examples",
+      "headings": [
+        {
+          "title": "Set up Laravel Project",
+          "depth": 2,
+          "id": "set-up-laravel-project",
+          "headings": [
+            {
+              "title": "Installation",
+              "depth": 3,
+              "id": "installation"
+            }
+          ]
+        },
+        {
+          "title": "Set up Symfony Project",
+          "depth": 2,
+          "id": "set-up-symfony-project",
+          "headings": [
+            {
+              "title": "Installation",
+              "depth": 3,
+              "id": "installation"
+            }
+          ]
+        }
+      ]
     }
   },
   "sources": {
     "README.md": "index.html",
-    "docs/quick-start.md": "quick-start.html"
+    "docs/quick-start.md": "quick-start.html",
+    "docs/services.md": "services.html",
+    "docs/examples.md": "examples.html"
   }
 }

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/style.css?t=615badd5">
+    <script src="assets/script.js?t=42463e55"></script>
+    <title>Examples - Docker Homestead</title>
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body class="-menu-visible">
+    <div class="doc-layout">
+      <div class="toggle menu-toggle js-menu-toggle"></div>
+      <div class="menu toc-menu">
+        <li class="menu-item -level-0 -parent">
+          <ul class="submenu">
+            <li class="menu-item -level-1"><a class="link title  link-index" href="index.html">Docker Homestead</a>
+            </li>
+            <li class="menu-item -level-1"><a class="link title  link-quick-start" href="quick-start.html">Getting started</a>
+            </li>
+            <li class="menu-item -level-1"><a class="link title  link-services" href="services.html">Services</a>
+            </li>
+            <li class="menu-item -level-1"><a class="link title -active link-examples" href="examples.html">Examples</a>
+              <ul class="headings heading-list">
+                <li class="heading-item -depth-2"><a class="hlink link-set-up-laravel-project" href="#set-up-laravel-project">Set up Laravel Project</a>
+                  <ul class="heading-list -depth-2">
+                    <li class="heading-item -depth-3"><a class="hlink link-installation" href="#installation">Installation</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="heading-item -depth-2"><a class="hlink link-set-up-symfony-project" href="#set-up-symfony-project">Set up Symfony Project</a>
+                  <ul class="heading-list -depth-2">
+                    <li class="heading-item -depth-3"><a class="hlink link-installation" href="#installation">Installation</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </div>
+      <div class="body page-examples">
+        <div class="header-nav">
+          <div class="right"><a class="iconlink" href="https://github.com/gcamrit/docker-homestead" data-title="gcamrit/docker-homestead">
+              <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
+          </div>
+        </div>
+        <div class="markdown-body"><h2 id="set-up-laravel-project">Set up Laravel Project</h2>
+<h3 id="installation">Installation</h3>
+<ul>
+<li>
+<p>Run the playground service using <code>$ docker-compose exec playground bash</code></p>
+</li>
+<li>
+<p>Install via Composer Create-Project</p>
+<pre><code class="lang-bash">$ composer create-project --prefer-dist laravel/laravel blog
+</code></pre>
+</li>
+<li>
+<p>Install via Laravel Installer</p>
+<pre><code class="lang-bash">$ laravel new blog
+</code></pre>
+<p>Here blog is the name of laravel project</p>
+</li>
+<li>
+<p>Example config file for laravel application
+Inside the config/sites directory just create blog.conf and configuration be something like this</p>
+<pre><code class="lang-bash">server {
+  listen 80;
+  listen [::]:80;
+
+  server_name blog.local;
+  root /var/www/blog/public;
+
+  index index.php index.html index.htm index.nginx-debian.html;
+
+  server_name _;
+  
+  autoindex on;
+
+  location / {
+    try_files <span class="hljs-variable">$uri</span> <span class="hljs-variable">$uri</span>/ /index.php?<span class="hljs-variable">$query_string</span>;
+  }
+
+  location ~ \.php$ {
+    include snippets/fastcgi-php.conf;
+    fastcgi_pass 0.0.0.0:9000;
+  }
+
+  location ~ /\.ht {
+    deny all;
+  }
+
+  location ~ /.well-known {
+    allow all;
+  }
+}
+</code></pre>
+<p>Do not forget to register the domain in /etc/hosts</p>
+<pre><code class="lang-bash">127.0.0.1  blog.local
+</code></pre>
+</li>
+<li>
+<p>In your laravel project .env file set following</p>
+<pre><code>DB_HOST=mysql
+DB_USERNAME=homestead
+DB_PASSWORD=secret
+REDIS_HOST=redis
+</code></pre>
+</li>
+</ul>
+<h2 id="set-up-symfony-project">Set up Symfony Project</h2>
+<h3 id="installation">Installation</h3>
+<ul>
+<li>
+<p>Run the playground service using <code>$ docker-compose exec playground bash</code></p>
+</li>
+<li>
+<p>Install via Composer Create-Project</p>
+<pre><code class="lang-bash">$ composer create-project symfony/website-skeleton blog
+</code></pre>
+</li>
+<li>
+<p>Install via Symfony Installer</p>
+<pre><code class="lang-bash">$ laravel new blog
+</code></pre>
+<p>Here blog is the name of symfony project</p>
+</li>
+<li>
+<p>Example config file for symfony application
+Inside the config/sites directory just create blog.conf and configuration be something like this</p>
+<pre><code class="lang-bash">server {
+  listen 80;
+  listen [::]:80;
+
+  server_name blog.local;
+  root /var/www/blog/public;
+
+  index index.php index.html index.htm index.nginx-debian.html;
+
+  server_name _;
+  
+  autoindex on;
+
+  location / {
+    try_files <span class="hljs-variable">$uri</span> <span class="hljs-variable">$uri</span>/ /index.php?<span class="hljs-variable">$query_string</span>;
+  }
+
+  location ~ \.php$ {
+    include snippets/fastcgi-php.conf;
+    fastcgi_pass 0.0.0.0:9000;
+  }
+
+  location ~ /\.ht {
+    deny all;
+  }
+
+  location ~ /.well-known {
+    allow all;
+  }
+}
+</code></pre>
+<p>Do not forget to register the domain in /etc/hosts</p>
+<pre><code class="lang-bash">127.0.0.1  blog.local
+</code></pre>
+</li>
+<li>
+<p>In your symfony project .env file set following</p>
+<pre><code class="lang-bash">DATABASE_URL=mysql://db_user:db_password@127.0.0.1:3306/db_name
+</code></pre>
+<p>For e.g.</p>
+<pre><code class="lang-bash">DATABASE_URL=mysql://homestead:secret@127.0.0.1:3306/db_name
+</code></pre>
+</li>
+</ul>
+
+        </div>
+        <div class="footer-nav">
+          <div class="left"><a href="services.html"><span class="title">Services</span></a></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

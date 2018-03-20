@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/style.css?t=615badd5">
+    <script src="assets/script.js?t=42463e55"></script>
+    <title>Services - Docker Homestead</title>
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body class="-menu-visible">
+    <div class="doc-layout">
+      <div class="toggle menu-toggle js-menu-toggle"></div>
+      <div class="menu toc-menu">
+        <li class="menu-item -level-0 -parent">
+          <ul class="submenu">
+            <li class="menu-item -level-1"><a class="link title  link-index" href="index.html">Docker Homestead</a>
+            </li>
+            <li class="menu-item -level-1"><a class="link title  link-quick-start" href="quick-start.html">Getting started</a>
+            </li>
+            <li class="menu-item -level-1"><a class="link title -active link-services" href="services.html">Services</a>
+              <ul class="headings heading-list">
+                <li class="heading-item -depth-3"><a class="hlink link-play-with-webserver" href="#play-with-webserver">Play with webserver</a>
+                </li>
+                <li class="heading-item -depth-3"><a class="hlink link-play-with-playground" href="#play-with-playground">Play with playground</a>
+                </li>
+                <li class="heading-item -depth-3"><a class="hlink link-how-to-work-on-mysql-database" href="#how-to-work-on-mysql-database">How to work on mysql database ?</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1"><a class="link title  link-examples" href="examples.html">Examples</a>
+            </li>
+          </ul>
+        </li>
+      </div>
+      <div class="body page-services">
+        <div class="header-nav">
+          <div class="right"><a class="iconlink" href="https://github.com/gcamrit/docker-homestead" data-title="gcamrit/docker-homestead">
+              <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
+          </div>
+        </div>
+        <div class="markdown-body"><h3 id="play-with-webserver">Play with webserver</h3>
+<ul>
+<li></li>
+<li>From docker-homestead run command</li>
+</ul>
+<pre><code class="lang-bash">$ docker-compose <span class="pl-c1">exec</span> webserver bash
+</code></pre>
+<ul>
+<li>Now run <code>$ ls</code> command, all the respositories which are inside Projects can be seen</li>
+<li>Go to your project in which you want to play by <code>$ cd project-repo</code></li>
+<li>php_cli related commands can be accomplish from here</li>
+<li>Have Fun !</li>
+</ul>
+<h3 id="play-with-playground">Play with playground</h3>
+<ul>
+<li></li>
+<li>From docker-homestead run command</li>
+</ul>
+<pre><code class="lang-bash">$ docker-compose <span class="pl-c1">exec</span> playground bash
+</code></pre>
+<ul>
+<li>Now run <code>$ ls</code> command, all the respositories which are inside Projects can be seen</li>
+<li>Go to your project in which you want to play by <code>$ cd project-repo</code></li>
+<li>php_cli, composer, npm etc related commands can be accomplish from here</li>
+<li>Have Fun !</li>
+</ul>
+<h3 id="how-to-work-on-mysql-database">How to work on mysql database ?</h3>
+<ul>
+<li></li>
+<li>From docker-homestead run command</li>
+</ul>
+<pre><code class="lang-bash">$ docker-compose <span class="pl-c1">exec</span> mysql bash
+</code></pre>
+<ul>
+<li>Run the following command, and login to mysql</li>
+</ul>
+<pre><code class="lang-bash">$ mysql -u homestead -p
+</code></pre>
+<ul>
+<li>Then You will be able to do any database operation from command line.</li>
+</ul>
+
+        </div>
+        <div class="footer-nav">
+          <div class="left"><a href="quick-start.html"><span class="title">Getting started</span></a></div>
+          <div class="right"><a href="examples.html"><span class="label">Next: </span><span class="title">Examples</span></a></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
