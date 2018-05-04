@@ -1,5 +1,4 @@
-### Play with webserver
-- 
+### Webserver
 - From docker-homestead run command
 ```bash
 $ docker-compose exec webserver bash
@@ -9,8 +8,7 @@ $ docker-compose exec webserver bash
 - php_cli related commands can be accomplish from here
 - Have Fun !
 
-### Play with playground
-- 
+### Playground
 - From docker-homestead run command
 ```bash
 $ docker-compose exec playground bash
@@ -20,8 +18,7 @@ $ docker-compose exec playground bash
 - php_cli, composer, npm etc related commands can be accomplish from here
 - Have Fun !
  
-### How to work on mysql database ?
--
+### Mysql
 - From docker-homestead run command 
 ```bash
 $ docker-compose exec mysql bash

@@ -46,3 +46,4 @@ docker-compose up -d
 - PHP Server: Nginx
 - PHP Compiler: PHP FPM
 - Random Tools: Laravel Installer, Symfony Installer
+- NodeJs
