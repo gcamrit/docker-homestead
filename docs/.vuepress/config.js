@@ -1,6 +1,7 @@
 module.exports = {
   title: 'Docker Homestead',
   description: 'Just playing around',
+  base: 'docker-homestead'
   themeConfig: {
     repo: 'gcamrit/docker-homestead',
     editLinks: true,
