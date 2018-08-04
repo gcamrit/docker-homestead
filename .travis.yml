@@ -1,20 +1,30 @@
 language: node_js
 node_js:
-- 'stable'
-
-cache:
-  directories:
-  - node_modules
-
+    - "10"
 env:
-  global:
-    - GIT_NAME: Travis CI
-    - GIT_EMAIL: nobody@nobody.org
-    - GITHUB_REPO: gcamrit/docker-homestead
-    - GIT_SOURCE: _docpress
-
+    - CXX=g++-4.8
+addons:
+    apt:
+        sources:
+            - ubuntu-toolchain-r-test
+        packages:
+            - g++-4.8
+install:
+    - npm install -g vuepress
 script:
-- npm install docpress && ./node_modules/.bin/docpress build
-
-after_success:
-- if [ "$TRAVIS_BRANCH" = "documentation" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then npm install git-update-ghpages && ./node_modules/.bin/git-update-ghpages -e; fi
+    - npm run docs:build
+cache:
+    directories:
+        - "node_modules"
+notifications:
+    email: false
+deploy:
+    provider: pages
+    skip-cleanup: true
+    local_dir: docs/.vuepress/dist
+    github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+    repo: gcamrit/docker-homestead
+    keep-history: true
+    target-branch: master
+    on:
+        branch: master

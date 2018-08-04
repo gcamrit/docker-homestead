@@ -38,11 +38,3 @@ docker-compose up -d
 ```bash
 127.0.0.1  homestead.app
 ```
-
-7 - Supported Software (image)
-
-- Database Engine: MySql
-- Cache Engine: Redis
-- PHP Server: Nginx
-- PHP Compiler: PHP FPM
-- Random Tools: Laravel Installer, Symfony Installer
