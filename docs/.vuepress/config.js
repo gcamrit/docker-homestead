@@ -28,4 +28,4 @@ module.exports = {
     ]
   }
 }
-//amrit.gc+test1234@introcept.co
+import './override.styl'
