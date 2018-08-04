@@ -1,91 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="assets/style.css?t=615badd5">
-    <script src="assets/script.js?t=42463e55"></script>
-    <title>Getting started</title>
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Docker Homestead</title>
+    <meta name="description" content="Just playing around">
+    
+    
+    <link rel="preload" href="/docker-homestead/assets/css/0.styles.1030536f.css" as="style"><link rel="preload" href="/docker-homestead/assets/js/app.9ad8d346.js" as="script"><link rel="preload" href="/docker-homestead/assets/js/4.fd245ca4.js" as="script"><link rel="prefetch" href="/docker-homestead/assets/js/2.cda51ec0.js"><link rel="prefetch" href="/docker-homestead/assets/js/3.f9cbbcb7.js"><link rel="prefetch" href="/docker-homestead/assets/js/5.c6209e3a.js"><link rel="prefetch" href="/docker-homestead/assets/js/6.b6d68248.js"><link rel="prefetch" href="/docker-homestead/assets/js/7.d8582f4d.js"><link rel="prefetch" href="/docker-homestead/assets/js/8.db0395e3.js"><link rel="prefetch" href="/docker-homestead/assets/js/9.725f843a.js"><link rel="prefetch" href="/docker-homestead/assets/js/10.4dcc6996.js">
+    <link rel="stylesheet" href="/docker-homestead/assets/css/0.styles.1030536f.css">
   </head>
-  <body class="-menu-visible">
-    <div class="doc-layout">
-      <div class="toggle menu-toggle js-menu-toggle"></div>
-      <div class="menu toc-menu">
-        <li class="menu-item -level-0 -parent">
-          <ul class="submenu">
-            <li class="menu-item -level-1"><a class="link title -active link-index" href="index.html">Getting started</a>
-              <ul class="headings heading-list">
-                <li class="heading-item -depth-2"><a class="hlink link-requirements" href="#requirements">Requirements</a>
-                </li>
-                <li class="heading-item -depth-2"><a class="hlink link-installation" href="#installation">Installation</a>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-item -level-1"><a class="link title  link-services" href="services.html">Services</a>
-            </li>
-            <li class="menu-item -level-1 -parent"><span class="title">Examples</span>
-              <ul class="submenu">
-                <li class="menu-item -level-2"><a class="link title  link-exampleslaravel" href="examples/laravel.html">Laravel Application</a>
-                </li>
-                <li class="menu-item -level-2"><a class="link title  link-examplessymfony" href="examples/symfony.html">Symfony Application</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-      </div>
-      <div class="body page-index">
-        <div class="header-nav">
-          <div class="right"><a class="iconlink" href="https://github.com/gcamrit/docker-homestead" data-title="gcamrit/docker-homestead">
-              <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
-          </div>
-        </div>
-        <div class="markdown-body"><h2 id="requirements">Requirements</h2>
-<ul>
-<li><a href="https://git-scm.com/downloads">Git</a></li>
-<li><a href="https://www.docker.com/products/docker/">Docker</a></li>
-<li><a href="https://www.docker.com/products/docker-compose">Docker Compose</a></li>
-</ul>
-<h2 id="installation">Installation</h2>
-<p>1 - Clone this repository anywhere on your machine:</p>
-<pre><code class="lang-bash">git <span class="pl-c1">clone</span> https://github.com/gcamrit/docker-homestead.git
-</code></pre>
-<p>2 - Now you have to configure you development environment</p>
-<pre><code class="lang-bash"><span class="pl-c1">cd</span> docker-homestead &amp;&amp; cp .env.example .env
-</code></pre>
-<p>3 - <code>.env</code> contains some configuration you might want to adjust as your need.</p>
-<pre><code class="lang-bash"><span class="pl-c"># this is what it contains by default feel free to change as you need</span>
-
-DOCKER_USER=homestead   <span class="pl-c"># you username of your local machine</span>
-PROJECT_ROOT=~/Projects <span class="pl-c"># where you put all you project on your machine</span>
-
-MYSQL_VERSION=5.7 <span class="pl-c"># available mysql version are 5.5, 5.6, 5.7</span>
-MYSQL_DATABASE=homestead
-MYSQL_USER=homestead
-MYSQL_PASSWORD=secret
-MYSQL_ROOT_PASSWORD=root
-</code></pre>
-<p>4 - Run Containers: <em>(Make sure you are in the <code>docker-homestead</code> folder before running the <code>docker-compose</code> commands).</em></p>
-<pre><code class="lang-bash">docker-compose up <span class="hljs-_">-d</span>
-</code></pre>
-<p>5 - As this stack contains nginx all your project configuration file can be created in <code>config/sites</code> directory.</p>
-<p>6 - You must add the &#x201C;domains&#x201D; for your Nginx sites to the hosts file on your machine.On Mac and Linux, this file is located at <code>/etc/hosts</code>. On Windows, it is located at  <code>C:\Windows\System32\drivers\etc\hosts.</code> The lines you add to this file will look like the following:</p>
-<pre><code class="lang-bash">127.0.0.1  homestead.app
-</code></pre>
-<p>7 - Supported Software (image)</p>
-<ul>
-<li>Database Engine: MySql</li>
-<li>Cache Engine: Redis</li>
-<li>PHP Server: Nginx</li>
-<li>PHP Compiler: PHP FPM</li>
-<li>Random Tools: Laravel Installer, Symfony Installer</li>
-</ul>
-
-        </div>
-        <div class="footer-nav">
-          <div class="right"><a href="services.html"><span class="label">Next: </span><span class="title">Services</span></a></div>
-        </div>
-      </div>
-    </div>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/docker-homestead/" class="home-link router-link-exact-active router-link-active"><!----> <span class="site-name">Docker Homestead</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"> <a href="https://github.com/gcamrit/docker-homestead" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"> <a href="https://github.com/gcamrit/docker-homestead" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/docker-homestead/quick-start.html" class="sidebar-link">Getting Started</a></li><li><div class="sidebar-group"><p class="sidebar-heading"><span>Services</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/docker-homestead/services/webserver.html" class="sidebar-link">Webserver</a></li><li><a href="/docker-homestead/services/playground.html" class="sidebar-link">Playground</a></li><li><a href="/docker-homestead/services/mysql.html" class="sidebar-link">MySql</a></li></ul></div></li><li><div class="sidebar-group"><p class="sidebar-heading"><span>Examples</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/docker-homestead/examples/laravel.html" class="sidebar-link">Laravel</a></li><li><a href="/docker-homestead/examples/symfony.html" class="sidebar-link">Symfony</a></li></ul></div></li></ul> </div> <div class="page"> <div class="content"><h1 id="documentation"><a href="#documentation" aria-hidden="true" class="header-anchor">#</a> Documentation</h1> <ul><li><a href="/docker-homestead/quick-start.html">Getting started</a></li> <li><a href="/docker-homestead/services.html">Services</a></li> <li>Examples
+<ul><li><a href="/docker-homestead/examples/laravel.html">Laravel Application</a></li> <li><a href="/docker-homestead/examples/symfony.html">Symfony Application</a></li></ul></li></ul></div> <div class="page-edit"><div class="edit-link"><a href="https://github.com/gcamrit/docker-homestead/edit/master/docs/README.md" target="_blank" rel="noopener noreferrer">Edit this page</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <!----></div> <!----> </div> <!----></div></div>
+    <script src="/docker-homestead/assets/js/4.fd245ca4.js" defer></script><script src="/docker-homestead/assets/js/app.9ad8d346.js" defer></script>
   </body>
 </html>
