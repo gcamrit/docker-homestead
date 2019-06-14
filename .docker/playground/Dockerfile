@@ -25,11 +25,6 @@ RUN mkdir -p /home/homestead/.composer/cache && chown homestead:homestead /home/
 RUN echo "export PATH=${PATH}:~/.composer/vendor/bin" >> ~/.bashrc
 
 RUN composer global require "hirak/prestissimo"
-RUN composer global require "laravel/installer"
-
-RUN curl -LsS https://symfony.com/installer -o ~/.composer/vendor/bin/symfony  && \
-  chmod a+x ~/.composer/vendor/bin/symfony
-
 
 USER root
 
